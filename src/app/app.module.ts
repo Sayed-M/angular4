@@ -7,13 +7,15 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { master_routes } from './app.routes';
 import { SignupComponent } from './signup/signup.component';
+import { Step2SignupComponent } from './step2-signup/step2-signup.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    Step2SignupComponent
   ],
   imports: [
     BrowserModule,
