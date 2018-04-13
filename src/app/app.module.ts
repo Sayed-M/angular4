@@ -8,6 +8,9 @@ import { RouterModule } from '@angular/router';
 import { master_routes } from './app.routes';
 import { SignupComponent } from './signup/signup.component';
 import { Step2SignupComponent } from './step2-signup/step2-signup.component';
+import { Step3SignupComponent } from './step3-signup/step3-signup.component';
+import { ActivateAccountComponent } from './activate-account/activate-account.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -15,7 +18,10 @@ import { Step2SignupComponent } from './step2-signup/step2-signup.component';
     AppComponent,
     LoginComponent,
     SignupComponent,
-    Step2SignupComponent
+    Step2SignupComponent,
+    Step3SignupComponent,
+    ActivateAccountComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

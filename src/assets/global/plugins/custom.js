@@ -56,27 +56,27 @@ $(document).ready(function () {
     
     // ================= SHOW PASSWORD ================
     
-    $(".password-input").each(function (index, input) {
-        var $input = $(input);
-        $(".form-table .show").click(function () {
-            var change = "";
-            if ($(this).html() === "Show") {
-                $(this).html("Hide");
-                change = "text";
-            } else {
-                $(this).html("Show");
-                change = "password";
-            }
-            var rep = $("<input type='" + change + "' />")
-        .attr("id", $input.attr("id"))
-        .attr("name", $input.attr("name"))
-        .attr('class', $input.attr('class'))
-        .val($input.val())
-        .insertBefore($input);
-      $input.remove();
-      $input = rep;
-    });
-  });
+//     $(".password-input").each(function (index, input) {
+//         var $input = $(input);
+//         $(".form-table .show").click(function () {
+//             var change = "";
+//             if ($(this).html() === "Show") {
+//                 $(this).html("Hide");
+//                 change = "text";
+//             } else {
+//                 $(this).html("Show");
+//                 change = "password";
+//             }
+//             var rep = $("<input type='" + change + "' />")
+//         .attr("id", $input.attr("id"))
+//         .attr("name", $input.attr("name"))
+//         .attr('class', $input.attr('class'))
+//         .val($input.val())
+//         .insertBefore($input);
+//       $input.remove();
+//       $input = rep;
+//     });
+//   });
     
     // ================= SHOW PASSWORD ================
     
