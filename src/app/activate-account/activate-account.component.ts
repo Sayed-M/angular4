@@ -11,6 +11,7 @@ export class ActivateAccountComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
     // ================= SHOW PASSWORD ================
     $('.password-input').each(function (index, input) {
       let $input = $(input);
