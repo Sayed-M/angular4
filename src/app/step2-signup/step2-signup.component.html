@@ -94,7 +94,7 @@
                             <div class="form-body">
                                 <div class="form-group first">
                                     <label class="control-label">Your company name</label>
-                                        <input type="text" class="form-control" placeholder="eg. ACME">
+                                        <input type="text" id="company-name" [(ngModel)]="companyName" (change)="getCompanyName()" class="form-control" placeholder="eg. ACME">
                                         <span class="help-block">Enter your first and last name</span>
                                 </div>
                                 <div class="form-group">

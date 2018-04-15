@@ -9,7 +9,7 @@ import { LocationStrategy } from '@angular/common';
 })
 export class AppComponent implements OnInit {
 
-  // scroll to top when routering to component && scroll to same position when back
+  // scroll to top when routing to component && scroll to same position when back
   isPopState = false;
 
   constructor(private router: Router, private locStrat: LocationStrategy) { }

@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Step2SignupComponent implements OnInit {
 
+  companyName: string;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  getCompanyName() {
+    console.log(this.companyName);
   }
 
 }
