@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import { InfoService } from '../services/info.service';
 
 @Component({
   selector: 'app-step3-signup',
@@ -7,32 +8,44 @@ import * as $ from 'jquery';
   styleUrls: ['./step3-signup.component.css']
 })
 export class Step3SignupComponent implements OnInit {
+    
+    userName: string;
 
-  constructor() { }
+    constructor( public myInfo: InfoService ) { }
 
-  ngOnInit() {
+    getUserName() {
+        this.myInfo.setUser(this.userName);
+
+        if (this.userName === undefined) {
+            this.myInfo.loggedIn = false;
+        } else {
+            this.myInfo.loggedIn = true;
+        }
+    }
+
+    ngOnInit() {
 
     // ================= SHOW PASSWORD ================
     $('.password-input').each(function (index, input) {
-      let $input = $(input);
-      $('.form-table .show').click(function () {
-          let change = '';
-          if ($(this).html() === 'Show') {
-              $(this).html('Hide');
-              change = 'text';
-          } else {
-              $(this).html('Show');
-              change = 'password';
-          }
-          const rep = $('<input type="' + change + '" />')
-          .attr('id', $input.attr('id'))
-          .attr('name', $input.attr('name'))
-          .attr('class', $input.attr('class'))
-          .val($input.val())
-          .insertBefore($input);
+        let $input = $(input);
+        $('.form-table .show').click(function () {
+            let change = '';
+            if ($(this).html() === 'Show') {
+                $(this).html('Hide');
+                change = 'text';
+            } else {
+                $(this).html('Show');
+                change = 'password';
+            }
+            const rep = $('<input type="' + change + '" />')
+            .attr('id', $input.attr('id'))
+            .attr('name', $input.attr('name'))
+            .attr('class', $input.attr('class'))
+            .val($input.val())
+            .insertBefore($input);
         $input.remove();
         $input = rep;
-      });
+        });
     });
 
     // ================= PASSWORD STRENGTH ================
@@ -77,8 +90,8 @@ export class Step3SignupComponent implements OnInit {
         result.addClass('vstrong');
         return '<span style="color:#00b656;font-weight:600;font-size:12px;">Strong</span>';
     }
-  }
+    }
     // ================= PASSWORD STRENGTH ================
-  }
+    }
 
 }

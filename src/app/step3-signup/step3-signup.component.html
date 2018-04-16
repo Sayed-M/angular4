@@ -95,7 +95,7 @@
                           <div class="form-body">
                               <div class="form-group first">
                                   <label class="control-label">Full name</label>
-                                      <div class="valid-user"><img src="../assets/pages/img/steps/check-right.png" class="valid-user-check" alt=""><input tabindex="1" type="text" class="form-control username" placeholder="eg. Hazem Hassan"></div>
+                                      <div class="valid-user"><img src="../assets/pages/img/steps/check-right.png" class="valid-user-check" alt=""><input tabindex="1" type="text" class="form-control username" placeholder="eg. Hazem Hassan" [(ngModel)]='userName'></div>
                                       <span class="user-error help-block">Type your first and last name!</span>
                                       <span class="after-user-error help-block">Your first and last name</span>
                               </div>
@@ -114,7 +114,7 @@
                                           <span class="pass-meter-color"></span>
                                       </span> -->
                               </div>
-                              <a href="" routerLink="/activate-account"><button class="continue" type="submit">Create my account</button></a>
+                              <a href="" routerLink="/activate-account"><button class="continue" type="submit" (click)='getUserName()'>Create my account</button></a>
                           </div>
                       </div>
                   </div>

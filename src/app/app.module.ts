@@ -12,6 +12,7 @@ import { Step2SignupComponent } from './step2-signup/step2-signup.component';
 import { Step3SignupComponent } from './step3-signup/step3-signup.component';
 import { ActivateAccountComponent } from './activate-account/activate-account.component';
 import { ProfileComponent } from './profile/profile.component';
+import { InfoService } from './services/info.service';
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { ProfileComponent } from './profile/profile.component';
     RouterModule.forRoot(master_routes),
     FormsModule
   ],
-  providers: [],
+  providers: [InfoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

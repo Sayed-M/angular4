@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InfoService } from '../services/info.service';
 
 @Component({
   selector: 'app-step2-signup',
@@ -9,13 +10,20 @@ export class Step2SignupComponent implements OnInit {
 
   companyName: string;
 
-  constructor() { }
+  constructor( public myInfo: InfoService ) { }
 
   ngOnInit() {
   }
 
   getCompanyName() {
-    console.log(this.companyName);
+    this.myInfo.setCompany(this.companyName);
+
+    if (this.companyName === undefined) {
+      this.myInfo.loggedIn = false;
+    } else {
+      this.myInfo.loggedIn = true;
+    }
+
   }
 
 }

@@ -1,3 +1,11 @@
-<p>
-  profile works!
-</p>
+<h2 class="company-name" *ngIf='this.myInfo.loggedIn; else anonymousCompany'>{{this.myInfo.getCompany()}}</h2>
+
+<ng-template #anonymousCompany>
+    <h2 class="anonymous-company">Hey Buddy!</h2>
+</ng-template>
+
+<h2 class="user-name" *ngIf='this.myInfo.loggedIn; else anonymousUser'>{{this.myInfo.getUser()}}</h2>
+
+<ng-template #anonymousUser>
+    <h2 class="anonymous-user">Hey Buddy!</h2>
+</ng-template>
