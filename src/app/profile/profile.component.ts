@@ -5,7 +5,11 @@ import { NgIf } from '@angular/common';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+  styleUrls: [
+    './../../assets/layouts/layout/css/themes/darkblue.min.css',
+    './../../assets/layouts/layout/css/custom-settings.css',
+    './profile.component.css'
+]
 })
 export class ProfileComponent implements OnInit {
 

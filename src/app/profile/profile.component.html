@@ -1,11 +1,97 @@
-<h2 class="company-name" *ngIf='this.myInfo.loggedIn; else anonymousCompany'>{{this.myInfo.getCompany()}}</h2>
+<!-- start body classes fix --> <div class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
 
-<ng-template #anonymousCompany>
-    <h2 class="anonymous-company">Hey Buddy!</h2>
-</ng-template>
+<!-- BEGIN HEADER -->
+<div class="page-header navbar nav-bar navbar-fixed-top">
+    <!-- BEGIN HEADER INNER -->
+    <div class="page-header-inner ">
+        <!-- BEGIN LOGO -->
+        <div class="page-logo">
+            <a href="" routerLink="/">
+                <span class="B">B</span><span>Buildaily</span>
+            </a>
+        </div>
+        <!-- END LOGO -->
+        <!-- BEGIN TOP NAVIGATION MENU -->
+        <div class="top-menu">
+            <ul class="nav navbar-nav pull-right">
+                <li class="dropdown dropdown-user">
+                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                        <img alt="" class="img-circle" src="../assets/layouts/layout/img/avatar1.png" />
+                        <span class="username username-hide-on-mobile" *ngIf='this.myInfo.loggedIn; else anonymousUser'> {{this.myInfo.getUser()}} </span>
 
-<h2 class="user-name" *ngIf='this.myInfo.loggedIn; else anonymousUser'>{{this.myInfo.getUser()}}</h2>
+                        <ng-template #anonymousUser>
+                            <span class="username username-hide-on-mobile"> My Info </span>
+                        </ng-template>
 
-<ng-template #anonymousUser>
-    <h2 class="anonymous-user">Hey Buddy!</h2>
-</ng-template>
+                        <i class="fa fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-default">
+                        <li>
+                            <a href="" routerLink="/profile">
+                                <i class="fa fa-user"></i> My Profile </a>
+                        </li>
+                        <li>
+                            <a href="" routerLink="/">
+                                <i class="fa fa-key"></i> Log Out </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- END TOP NAVIGATION MENU -->
+    </div>
+    <!-- END HEADER INNER -->
+</div>
+<!-- END HEADER -->
+
+<div class="page-content-wrapper">
+    <!-- BEGIN CONTENT BODY -->
+    <div class="page-content">
+        <h1>Company profile</h1>
+        <div class="wrapper">
+            
+            <div class="settings1 has-a-form">
+            
+                <div class="col-lg-6 col-xs-12 remove-left-padding remove-right-padding">
+                    <div class="media">
+                        <div class="media-left">
+                            <img src="./../../assets/pages/img/settings/profile-pic.png" alt="">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading" *ngIf='this.myInfo.loggedIn; else anonymousCompany'> {{this.myInfo.getCompany()}} </h4>
+                            <ng-template #anonymousCompany>
+                                <h4 class="media-heading"> Company Name </h4>
+                            </ng-template>
+                            <span *ngIf='this.myInfo.loggedIn'> By {{this.myInfo.getUser()}} </span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6 hidden-md hidden-sm hidden-xs">
+                    <div class="left-wrapper text-center">
+                        <div class="up-left-wrapper">
+                            <img class="media-object" src="../assets/pages/img/settings/verified.png" alt="...">
+                            <h2>Verify your company account</h2>
+                            <p>A verified company on Buildaily makes a company far more credible to contractors and other companies.</p>
+                        </div>
+                        <div class="down-left-wrapper">
+                            <h2>Your company account completeness</h2>
+                            <div class="text text-left">
+                                <p><i class="fa fa-plus blue-text"></i> Complete your company profile <span class="blue-text">&#40;+10%&#41;</span></p>
+                                <p><i class="fa fa-plus blue-text"></i> Complete your company registeration <span class="blue-text">&#40;+15%&#41;</span></p>
+                                <p><i class="fa fa-plus blue-text"></i> Complete your company profile <span class="blue-text">&#40;+10%&#41;</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            
+            </div>
+            
+        </div>
+    </div>
+    <!-- END CONTENT BODY -->
+</div>
+
+<!-- end body classes fix --> </div>
