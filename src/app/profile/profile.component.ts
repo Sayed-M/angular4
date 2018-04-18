@@ -6,8 +6,8 @@ import { NgIf } from '@angular/common';
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: [
-    './../../assets/layouts/layout/css/themes/darkblue.min.css',
-    './../../assets/layouts/layout/css/custom-settings.css',
+    '../../assets/layouts/layout/css/themes/darkblue.min.css',
+    '../../assets/layouts/layout/css/custom-settings.css',
     './profile.component.css'
 ]
 })

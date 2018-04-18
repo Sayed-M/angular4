@@ -16,7 +16,7 @@
             <ul class="nav navbar-nav pull-right">
                 <li class="dropdown dropdown-user">
                     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                        <img alt="" class="img-circle" src="../assets/layouts/layout/img/avatar1.png" />
+                        <img alt="" class="img-circle" src="./assets/layouts/layout/img/avatar1.png" />
                         <span class="username username-hide-on-mobile" *ngIf='this.myInfo.loggedIn; else anonymousUser'> {{this.myInfo.getUser()}} </span>
 
                         <ng-template #anonymousUser>
@@ -55,7 +55,7 @@
                 <div class="col-lg-6 col-xs-12 remove-left-padding remove-right-padding">
                     <div class="media">
                         <div class="media-left">
-                            <img src="./../../assets/pages/img/settings/profile-pic.png" alt="">
+                            <img src="./assets/pages/img/settings/profile-pic.png" alt="">
                         </div>
                         <div class="media-body">
                             <h4 class="media-heading" *ngIf='this.myInfo.loggedIn; else anonymousCompany'> {{this.myInfo.getCompany()}} </h4>
@@ -71,7 +71,7 @@
                 <div class="col-lg-6 hidden-md hidden-sm hidden-xs">
                     <div class="left-wrapper text-center">
                         <div class="up-left-wrapper">
-                            <img class="media-object" src="../assets/pages/img/settings/verified.png" alt="...">
+                            <img class="media-object" src="./assets/pages/img/settings/verified.png" alt="...">
                             <h2>Verify your company account</h2>
                             <p>A verified company on Buildaily makes a company far more credible to contractors and other companies.</p>
                         </div>
