@@ -412,7 +412,6 @@ body{
     .page-header.navbar .page-logo{
         padding: 0 20px !important;
         box-shadow: none;
-        width: 130px;
         background: none;
     }
     .page-header.navbar .page-logo span.b-to-m{
