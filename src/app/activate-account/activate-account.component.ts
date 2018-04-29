@@ -21,7 +21,7 @@ export class ActivateAccountComponent implements OnInit {
   login() {
     if (this.confirmEmail === this.myInfo.getEmail() && this.confirmPassword === this.myInfo.getPassword()) {
       this.router.navigate(['profile']);
-    } else if (this.confirmEmail === undefined || this.confirmPassword === undefined) {
+    } else if (this.myInfo.getEmail() === undefined || this.myInfo.getPassword() === undefined) {
       this.logged = false;
     } else {
       this.logged = false;

@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   logging() {
     if (this.emailConfirm === this.myInfo.getEmail() && this.passwordConfirm === this.myInfo.getPassword()) {
       this.router.navigate(['profile']);
-    } else if (this.emailConfirm === undefined || this.passwordConfirm === undefined) {
+    } else if (this.myInfo.getEmail() === undefined || this.myInfo.getPassword() === undefined) {
       this.notLogged = false;
     } else {
       this.notLogged = false;
