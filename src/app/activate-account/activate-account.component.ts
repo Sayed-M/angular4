@@ -19,10 +19,14 @@ export class ActivateAccountComponent implements OnInit {
   logged: boolean = true;
 
   login() {
-    if (this.confirmEmail === this.myInfo.getEmail() && this.confirmPassword === this.myInfo.getPassword()) {
+    if (this.confirmEmail === this.myInfo.getEmail() && this.confirmPassword === this.myInfo.getPassword() && this.myInfo.getEmail() !== undefined && this.myInfo.getPassword() !== undefined) {
       this.router.navigate(['profile']);
     } else if (this.myInfo.getEmail() === undefined || this.myInfo.getPassword() === undefined) {
       this.logged = false;
+      console.log('sa');
+    }  else if (this.myInfo.getEmail() === '' || this.myInfo.getPassword() === '') {
+      this.logged = false;
+      console.log('sa');
     } else {
       this.logged = false;
     }

@@ -15,15 +15,19 @@ export class LoginComponent implements OnInit {
 
   passwordConfirm: any;
 
-  notLogged: boolean = true;
+  Logged: boolean = true;
 
   logging() {
-    if (this.emailConfirm === this.myInfo.getEmail() && this.passwordConfirm === this.myInfo.getPassword()) {
+    if (this.emailConfirm === this.myInfo.getEmail() && this.passwordConfirm === this.myInfo.getPassword() && this.myInfo.getEmail() !== undefined && this.myInfo.getPassword() !== undefined) {
       this.router.navigate(['profile']);
     } else if (this.myInfo.getEmail() === undefined || this.myInfo.getPassword() === undefined) {
-      this.notLogged = false;
+      this.Logged = false;
+      console.log('sa');
+    }  else if (this.myInfo.getEmail() === '' || this.myInfo.getPassword() === '') {
+      this.Logged = false;
+      console.log('sa');
     } else {
-      this.notLogged = false;
+      this.Logged = false;
     }
   }
 
