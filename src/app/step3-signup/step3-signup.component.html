@@ -101,13 +101,13 @@
                               </div>
                               <div class="form-group">
                                   <label class="control-label">Email Address</label>
-                                      <div class="valid-email"><img src="./assets/pages/img/steps/check-right.png" class="valid-email-check" alt=""><input tabindex="2" type="email" class="form-control email" placeholder="your-name@yourcompany.com"></div>
+                                      <div class="valid-email"><img src="./assets/pages/img/steps/check-right.png" class="valid-email-check" alt=""><input tabindex="2" type="email" [(ngModel)]="email" class="form-control email" placeholder="your-name@yourcompany.com"></div>
                                       <span class="email-error help-block">Type correct email!</span>
                                       <span class="after-email-error help-block">Your business email address</span>
                               </div>
                               <div class="form-group last">
                                   <label class="control-label">Password</label><span class="show">Show</span>
-                                      <input tabindex="3" type="password" class="form-control password-input">
+                                      <input tabindex="3" type="password" [(ngModel)]="password" class="form-control password-input">
                                       <span class="password-error help-block">Type a password!</span>
                                       <span class="after-password-error help-block">Password strength: <span class="changable"></span></span>
                                       <!-- <span class="pass-meter hidden-sm hidden-md hidden-lg">

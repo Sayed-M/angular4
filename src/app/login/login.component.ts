@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { InfoService } from '../services/info.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(public myInfo: InfoService, private router: Router) { }
+
+  emailConfirm: string;
+
+  passwordConfirm: any;
+
+  notLogged: boolean = true;
+
+  logging() {
+    if (this.emailConfirm === this.myInfo.getEmail() && this.passwordConfirm === this.myInfo.getPassword()) {
+      this.router.navigate(['profile']);
+    } else {
+      this.notLogged = false;
+    }
+  }
 
   ngOnInit() {
     // ================= SHOW PASSWORD ================

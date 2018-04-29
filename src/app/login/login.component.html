@@ -61,16 +61,19 @@
                             <div class="form-body">
                                 <div class="form-group first">
                                     <label class="control-label">Email</label>
-                                        <input type="email" class="form-control" placeholder="">
+                                        <input type="email" [(ngModel)]="emailConfirm" class="form-control" placeholder="">
                                 </div>
                                 <div class="form-group last">
                                     <label class="control-label">Password</label><span class="show">Show</span>
-                                        <input type="password" class="form-control password-input">
+                                        <input type="password" [(ngModel)]="passwordConfirm" class="form-control password-input">
                                         <span class="forgot">
                                             <a href="#">Forgot password?</a>
                                         </span>
                                 </div>
-                                <button class="continue" routerLink="/profile">Login</button>
+                                <button class="continue" (click)="logging()">Login</button>
+                                <div *ngIf="!notLogged" class="alert alert-danger" style="margin-top: 10px">
+                                    Wrong email or password!
+                                </div>
                             </div>
                         </div>
                     </div>

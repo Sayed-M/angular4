@@ -11,10 +11,18 @@ export class Step3SignupComponent implements OnInit {
     
     userName: string;
 
+    email: string;
+
+    password: any;
+
     constructor( public myInfo: InfoService ) { }
 
     getUserName() {
         this.myInfo.setUser(this.userName);
+
+        this.myInfo.setEmail(this.email);
+
+        this.myInfo.setPassword(this.password);
 
         if (this.userName === undefined) {
             this.myInfo.loggedIn = false;

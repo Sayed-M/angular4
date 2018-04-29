@@ -7,6 +7,10 @@ export class InfoService {
 
   user: string;
 
+  email: string;
+
+  password: any;
+
   loggedIn: boolean = false;
 
   constructor() { }
@@ -25,6 +29,22 @@ export class InfoService {
 
   public setUser(data) {
     this.user = data;
+  }
+
+  public getEmail() {
+    return this.email;
+  }
+
+  public setEmail(data) {
+    this.email = data;
+  }
+
+  public getPassword() {
+    return this.password;
+  }
+
+  public setPassword(data) {
+    this.password = data;
   }
 
 }

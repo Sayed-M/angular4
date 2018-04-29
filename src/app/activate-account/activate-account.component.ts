@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import { InfoService } from '../services/info.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-activate-account',
@@ -8,7 +10,21 @@ import * as $ from 'jquery';
 })
 export class ActivateAccountComponent implements OnInit {
 
-  constructor() { }
+  constructor( public myInfo: InfoService, private router: Router ) { }
+
+  confirmEmail: string;
+
+  confirmPassword: any;
+
+  logged: boolean = true;
+
+  login() {
+    if (this.confirmEmail === this.myInfo.getEmail() && this.confirmPassword === this.myInfo.getPassword()) {
+      this.router.navigate(['profile']);
+    } else {
+      this.logged = false;
+    }
+  }
 
   ngOnInit() {
 
