@@ -13,5 +13,5 @@ export const master_routes: Routes = [
     {path: 'activate-account', component: ActivateAccountComponent},
     {path: 'login', component: LoginComponent},
     {path: 'profile', component: ProfileComponent},
-    {path: '**', component: SignupComponent}
+    {path: '**', redirectTo: '/signup'}
 ];
