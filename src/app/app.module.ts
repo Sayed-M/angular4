@@ -13,6 +13,7 @@ import { Step3SignupComponent } from './step3-signup/step3-signup.component';
 import { ActivateAccountComponent } from './activate-account/activate-account.component';
 import { ProfileComponent } from './profile/profile.component';
 import { InfoService } from './services/info.service';
+import { StreamService } from './services/stream.service';
 
 
 @NgModule({
@@ -30,7 +31,7 @@ import { InfoService } from './services/info.service';
     RouterModule.forRoot(master_routes),
     FormsModule
   ],
-  providers: [InfoService],
+  providers: [InfoService, StreamService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
