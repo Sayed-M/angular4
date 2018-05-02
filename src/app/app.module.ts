@@ -14,6 +14,8 @@ import { ActivateAccountComponent } from './activate-account/activate-account.co
 import { ProfileComponent } from './profile/profile.component';
 import { InfoService } from './services/info.service';
 import { StreamService } from './services/stream.service';
+import { HttpModule } from '@angular/http';
+import { CallapiService } from './services/callapi.service';
 
 
 @NgModule({
@@ -29,9 +31,10 @@ import { StreamService } from './services/stream.service';
   imports: [
     BrowserModule,
     RouterModule.forRoot(master_routes),
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
-  providers: [InfoService, StreamService],
+  providers: [InfoService, StreamService, CallapiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
