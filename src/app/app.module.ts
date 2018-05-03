@@ -14,7 +14,6 @@ import { ActivateAccountComponent } from './activate-account/activate-account.co
 import { ProfileComponent } from './profile/profile.component';
 import { InfoService } from './services/info.service';
 import { HttpModule } from '@angular/http';
-import { CallapiService } from './services/callapi.service';
 
 
 @NgModule({
@@ -33,7 +32,7 @@ import { CallapiService } from './services/callapi.service';
     FormsModule,
     HttpModule
   ],
-  providers: [InfoService, CallapiService],
+  providers: [InfoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

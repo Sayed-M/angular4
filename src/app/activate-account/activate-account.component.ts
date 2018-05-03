@@ -23,10 +23,8 @@ export class ActivateAccountComponent implements OnInit {
       this.router.navigate(['profile']);
     } else if (this.myInfo.getEmail() === undefined || this.myInfo.getPassword() === undefined) {
       this.logged = false;
-      console.log('sa');
     }  else if (this.myInfo.getEmail() === '' || this.myInfo.getPassword() === '') {
       this.logged = false;
-      console.log('sa');
     } else {
       this.logged = false;
     }

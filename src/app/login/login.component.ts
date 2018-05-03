@@ -22,10 +22,8 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['profile']);
     } else if (this.myInfo.getEmail() === undefined || this.myInfo.getPassword() === undefined) {
       this.Logged = false;
-      console.log('sa');
     }  else if (this.myInfo.getEmail() === '' || this.myInfo.getPassword() === '') {
       this.Logged = false;
-      console.log('sa');
     } else {
       this.Logged = false;
     }
