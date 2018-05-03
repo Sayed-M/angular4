@@ -13,7 +13,6 @@ import { Step3SignupComponent } from './step3-signup/step3-signup.component';
 import { ActivateAccountComponent } from './activate-account/activate-account.component';
 import { ProfileComponent } from './profile/profile.component';
 import { InfoService } from './services/info.service';
-import { StreamService } from './services/stream.service';
 import { HttpModule } from '@angular/http';
 import { CallapiService } from './services/callapi.service';
 
@@ -34,7 +33,7 @@ import { CallapiService } from './services/callapi.service';
     FormsModule,
     HttpModule
   ],
-  providers: [InfoService, StreamService, CallapiService],
+  providers: [InfoService, CallapiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

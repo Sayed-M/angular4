@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { InfoService } from '../services/info.service';
-import { NgIf } from '@angular/common';
-import { StreamService } from '../services/stream.service';
 import { CallapiService } from '../services/callapi.service';
 
 @Component({
@@ -15,29 +13,21 @@ import { CallapiService } from '../services/callapi.service';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor( public myInfo: InfoService, private myStream: StreamService, private call: CallapiService ) { }
+  constructor( public myInfo: InfoService, private call: CallapiService ) { }
 
   ngOnInit() {
-  }
-
-  loadMe() {
-    this.myStream.createStream().subscribe(
-      next => {
-        console.log(next);
-      },
-      error => {
-        console.log(error);
-      },
-      () => {
-        console.log('Done!');
-      }
-    );
   }
 
   callapi() {
     this.call.getPosts().subscribe(
       next => {
-        console.log(next);
+        for (var i = 1; i <= 5; i++) {
+          setTimeout(function(x) {
+            return function() {
+              $('.posts .post-title').append('<a href="#">' + next[x].title + '</a><br>')
+            };
+          }(i), 400*i);
+        }
       },
       error => {
         console.log(error);
